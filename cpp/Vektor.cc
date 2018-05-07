@@ -1,6 +1,7 @@
 #include "Vektor.hh"
 #include "cmath"
 
+// Vektor berechnen
 Vektor::Vektor(double nx, double ny, double nz) {
   x_ = nx;
   y_ = ny;
