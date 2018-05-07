@@ -37,6 +37,7 @@ int main() {
             << (a - v1 == Vektor(1, 1, -1) ? "ok" : "NEIN!") << '\n';
 
   // teste Skalar- und Kreuzprodukt
+  // std::cout << "unser erg:" << v1.mal(v2);
   std::cout << v1 << " mal " << v2 << " = 7                "
             << (v1.mal(v2) == 7 ? "ok" : "NEIN!") << '\n';
   std::cout << v1 << " kreuz " << v2 << " = (-7,7,7)       "
