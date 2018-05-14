@@ -1,4 +1,4 @@
-#include "Zylindermantel.hh"
+ #include "Zylindermantel.hh"
 
 #include <cstdlib>
 #include <cmath>
@@ -11,12 +11,12 @@ Zylindermantel::Zylindermantel(double nr, double nl)
 
 Vektor Zylindermantel::punkt() 
 {
-  double R   = r_;
+  double R   = r_ * rand()/(double)RAND_MAX;
   double phi =  2*M_PI * rand()/(double)RAND_MAX;
   double z   = l_*(rand()/(double)RAND_MAX -0.5);
 
-  double x = 0;
-  double y = 0;
+  double x = R * cos(phi);
+  double y = R * sin(phi);
   return Vektor(x,y,z);
 };
 

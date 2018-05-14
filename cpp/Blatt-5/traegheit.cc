@@ -27,8 +27,9 @@ int main()
     //Abstand Punkt x und Gerade a + t*u
     //Vektor n = ...;//Normalenvektor x-a kreuz u 
     double r = 0;//|n|/|u|
-    //std::cout << x << " :" << r << std::endl;
+    std::cout << x << " :" << r << std::endl;
     // addiere Beitrag des Massenpunktes zum Traegheitsmoment
+    r = (x-a).kreuz(u).betrag() / u.betrag();
     J += m * r*r;
   }
   std::cout << "Massentraegheitsmoment fuer einen Zylindermantel"
