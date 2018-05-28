@@ -6,7 +6,7 @@ CC=g++
 LD=g++
 
 #Alle Klassen cc-Dateien. Fuege hier weitere Klassen hinzu
-SRCS=Vektor.cc Zylindermantel.cc Vollzylinder.cc #Vollzylinder.cc
+SRCS=Vektor.cc Zylindermantel.cc #Vollzylinder.cc
 
 OBJS = $(SRCS:.cc=.o)
 

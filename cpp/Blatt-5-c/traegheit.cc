@@ -1,11 +1,11 @@
 #include <iostream>
 
-#include "Vollzylinder.hh"
+#include "Zylindermantel.hh"
 #include "Vektor.hh"
 
 int main() 
 {
-  const int N = 10000;//Anzahl Integrationspunkte
+  const int N = 10;//Anzahl Integrationspunkte
   const double M = 1;//Masse des Zylindermantels
   const double ZM_R = 1.0;//Radius der Zylindermantels
   const double ZM_L = 1.0;//Laenge des Zylindermantels
@@ -17,7 +17,7 @@ int main()
   std::cout << "Richtung:";
   std::cin >> u;
 
-  Vollzylinder *zm = new Vollzylinder(ZM_R,ZM_L); 
+  Zylindermantel *zm = new Zylindermantel(ZM_R,ZM_L); 
 
 
   double J = 0;//Massentraegheitsmoment
