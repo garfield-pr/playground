@@ -2,7 +2,10 @@
 #define ZYLINDERMANTEL_HH
 
 #include "Vektor.hh"
-
+#include "Koerper.hh"
+// class Zylindermantel {
+// public: Koerper;
+// };
 class Zylindermantel {
 public:
   Zylindermantel(double nr, double nl);

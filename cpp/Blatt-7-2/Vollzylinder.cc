@@ -1,17 +1,18 @@
- #include "Zylindermantel.hh"
+#include "Vollzylinder.hh"
 
 #include <cstdlib>
 #include <cmath>
 
-Zylindermantel::Zylindermantel(double nr, double nl)  
+Vollzylinder::Vollzylinder(double nr, double nl, double M)  
 {
   r_ = nr;
   l_ = nl;
+  M = 1.0;
 }
 
-Vektor Zylindermantel::punkt() 
+Vektor Vollzylinder::punkt() 
 {
-  double R   = r_ * rand()/(double)RAND_MAX;
+  double R   = r_ * sqrt(rand()/(double)RAND_MAX);
   double phi =  2*M_PI * rand()/(double)RAND_MAX;
   double z   = l_*(rand()/(double)RAND_MAX -0.5);
 
@@ -19,4 +20,3 @@ Vektor Zylindermantel::punkt()
   double y = R * sin(phi);
   return Vektor(x,y,z);
 };
-

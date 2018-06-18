@@ -2,8 +2,8 @@
 #define ZYLINDERMANTEL_HH
 
 #include "Vektor.hh"
-
-class Zylindermantel {
+#include "Koerper.hh"
+class Zylindermantel : public Koerper {
 public:
   Zylindermantel(double nr, double nl);
 
