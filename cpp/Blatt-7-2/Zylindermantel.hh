@@ -5,10 +5,8 @@
 #include "Koerper.hh"
 class Zylindermantel : public Koerper {
 public:
-  Zylindermantel(double nr, double nl);
-
+  Zylindermantel(double nr, double nl, double M);
   Vektor punkt();
-
 private:
   double r_,l_;
 };

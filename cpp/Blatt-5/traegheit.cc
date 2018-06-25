@@ -30,7 +30,7 @@ int main()
    
     // addiere Beitrag des Massenpunktes zum Traegheitsmoment
     r = (x-a).kreuz(u).betrag() / u.betrag();
-    std::cout << x << " :" << r << std::endl;
+    // std::cout << x << " :" << r << std::endl;
     J += m * r*r;
   }
   std::cout << "Massentraegheitsmoment fuer einen Zylindermantel"

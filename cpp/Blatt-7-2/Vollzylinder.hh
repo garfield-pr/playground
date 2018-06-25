@@ -8,8 +8,6 @@ public:
   Vollzylinder(double nr, double nl, double M);
 
   Vektor punkt();
-  double M = 1; //Masse des Zylindermantels
-
 private:
   double r_,l_;
 };

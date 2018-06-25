@@ -7,12 +7,9 @@ class Koerper {
 public:
 //   Zylindermantel(double nr, double nl);
   double M;
-  Vektor punkt();
-  std::string name() {
-      return "Koerper";
-  }
-private:
-  double r_,l_;
+  virtual Vektor punkt() = 0;
+  std::string Name;
 };
+
 
 #endif

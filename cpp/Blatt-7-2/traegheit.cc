@@ -2,9 +2,10 @@
 
 #include "Vollzylinder.hh"
 #include "Vektor.hh"
+#include "Zylindermantel.hh"
+
 
 double traegheit( Koerper *k , Vektor a , Vektor u, Vektor x) {
-  std :: cout << " berechne fuer " << k -> name() ;
   const int N = 10000;//Anzahl Integrationspunkte
   double J = 0;//Massentraegheitsmoment
   double m = (double) 1 / N;//Masse eines Massenpunktes
@@ -18,7 +19,7 @@ double traegheit( Koerper *k , Vektor a , Vektor u, Vektor x) {
    
     // addiere Beitrag des Massenpunktes zum Traegheitsmoment
     r = (x-a).kreuz(u).betrag() / u.betrag();
-    std::cout << x << " :" << r << std::endl;
+    // std::cout << x << " :" << r << std::endl;
     J = m * r*r;
   
   return J;
@@ -39,16 +40,19 @@ int main()
   std::cout << "Richtung:";
   std::cin >> u;
 
-  Vollzylinder *zm = new Vollzylinder(ZM_R,ZM_L, M); 
+  Koerper *zm = 0;
+  // zm = new Zylindermantel(ZM_R,ZM_L, M); 
+  zm = new Zylindermantel(ZM_R,ZM_L, M); 
   
   const int N = 10000;
   double J = 0;
+  std :: cout << "berechne fuer einen " << zm -> Name << " " ;
   for(int i = 0 ; i < N ; ++i) {
     Vektor x = zm -> punkt();
     J += traegheit(zm, a, u, x);
-    std::cout << J << std::endl;
+    // std::cout << J << std::endl;
   }
-  std::cout << "Massentraegheitsmoment fuer einen Zylindermantel"
+  std::cout << "das Massentraegheitsmoment" 
 	    << " mit a = " << a << " und u = " << u 
 	    << ": " << J << std::endl;
   delete zm;

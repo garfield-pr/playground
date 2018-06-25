@@ -5,8 +5,10 @@
 
 #include "Koerper.hh"
 
-Zylindermantel::Zylindermantel(double nr, double nl)  
+Zylindermantel::Zylindermantel(double nr, double nl, double m)
 {
+  M = m;
+  Name = "zylindermntl";
   r_ = nr;
   l_ = nl;
 }

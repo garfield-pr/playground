@@ -3,11 +3,12 @@
 #include <cstdlib>
 #include <cmath>
 
-Vollzylinder::Vollzylinder(double nr, double nl, double M)  
+Vollzylinder::Vollzylinder(double nr, double nl, double M)
 {
+  Name = "Vollzylinder";
   r_ = nr;
   l_ = nl;
-  M = 1.0;
+  this->M = M;
 }
 
 Vektor Vollzylinder::punkt() 

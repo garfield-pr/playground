@@ -129,7 +129,7 @@ template<class Functor> std::vector<double> trapez(Functor f, double a, double b
 int main()
 {
   //Testfunktion:
-  sinus f;
+  Pol1 f;
   std::cout << "f(0) = " << f(0) << '\n';
   // berechne Trapezformel fuer f
   std::vector<double> tf = trapez(f, 0.,3.,3);
