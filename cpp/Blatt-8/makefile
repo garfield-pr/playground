@@ -1,4 +1,4 @@
-CXXFLAGS = -std=c++11 -lpthread
+CXXFLAGS = -std=c++11 -pthread
 
 PROGRAM_LIST = calcpi.bin countwords.bin
 
